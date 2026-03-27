@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dead Serious About You</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #0b0b0b;
+    color: #eee;
+}
+
+/* NAV */
+nav {
+    position: fixed;
+    width: 100%;
+    padding: 15px 30px;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    z-index: 100;
+}
+
+nav h1 {
+    color: #ff4d4d;
+}
+
+nav a {
+    margin-left: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #ff4d4d;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    background: url('cover.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    padding: 60px;
+    position: relative;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(0,0,0,0.9), rgba(0,0,0,0.2));
+}
+
+.hero-content {
+    position: relative;
+    max-width: 600px;
+}
+
+.hero h2 {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    margin-bottom: 20px;
+    opacity: 0.85;
+}
+
+.hero button {
+    padding: 12px 20px;
+    background: #ff4d4d;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* SECTION */
+section {
+    padding: 80px 40px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+h2.section-title {
+    margin-bottom: 40px;
+    font-size: 2rem;
+}
+
+/* WORLD */
+.world {
+    line-height: 1.7;
+    opacity: 0.9;
+}
+
+/* CHARACTERS */
+.characters {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 280px;
+    position: relative;
+    cursor: pointer;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.card:hover img {
+    transform: scale(1.05);
+}
+
+.card-info {
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(to top, black, transparent);
+    width: 100%;
+    padding: 15px;
+}
+
+.card-info h3 {
+    margin-bottom: 5px;
+}
+
+/* EPISODES */
+.episodes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.episode {
+    background: #141414;
+    padding: 20px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.episode:hover {
+    transform: translateY(-5px);
+    background: #1f1f1f;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 30px;
+    background: black;
+    margin-top: 50px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+    <h1>DSAY</h1>
+    <div>
+        <a href="#world">World</a>
+        <a href="#characters">Survivors</a>
+        <a href="#episodes">Episodes</a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+    <div class="hero-content">
+        <h2>Dead Serious About You</h2>
+        <p>
+            In a world overrun by the undead, a strict cop and a chaotic thief
+            are forced to survive together… whether they like it or not.
+        </p>
+        <button onclick="document.getElementById('episodes').scrollIntoView()">Start Watching</button>
+    </div>
+</div>
+
+<!-- WORLD -->
+<section id="world">
+    <h2 class="section-title">🌍 World Setting</h2>
+    <div class="world">
+        <p>
+            Civilization collapsed almost overnight. Infection spread faster than fear,
+            leaving cities abandoned and survivors scattered.
+        </p>
+        <p>
+            Resources are scarce. Trust is dangerous. And the line between good and bad
+            has long been erased.
+        </p>
+        <p>
+            Somewhere in this broken world, two opposites are stuck together —
+            and somehow, that might be the biggest disaster of all.
+        </p>
+    </div>
+</section>
+
+<!-- CHARACTERS -->
+<section id="characters">
+    <h2 class="section-title">🧍 Meet the Survivors</h2>
+
+    <div class="characters">
+
+        <div class="card">
+            <img src="alan.jpg">
+            <div class="card-info">
+                <h3>Alan</h3>
+                <p>The last man still following the rules.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="diana.jpg">
+            <div class="card-info">
+                <h3>Diana</h3>
+                <p>The reason rules were made in the first place.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- EPISODES -->
+<section id="episodes">
+    <h2 class="section-title">📖 Episodes</h2>
+
+    <div class="episodes">
+
+        <div class="episode">
+            <h3>Ep 1: Worst First Impression</h3>
+            <p>They meet. It goes terribly.</p>
+        </div>
+
+        <div class="episode">
+            <h3>Ep 2: Temporary Alliance</h3>
+            <p>Working together is… not optional.</p>
+        </div>
+
+        <div class="episode">
+            <h3>Ep 3: Trust Issues</h3>
+            <p>Something goes missing. Guess who?</p>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <p>© Dead Serious About You</p>
+</footer>
+
+</body>
+</html>
