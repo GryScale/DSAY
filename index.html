@@ -5,22 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dead Serious About You</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+
+
 
 <style>
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-@font-face {
-  font-family: myFirstFont;
-  src: url(sansation_light.woff);
 }
 
-div {
-  font-family: myFirstFont;
+@font-face {
+    font-family: "Shine Flower";
+    src: url("assets/ShineFlower.otf") format("opentype");
 }
 
 html {
@@ -28,6 +25,7 @@ html {
 }
 
 body {
+    font-family: "Shine Flower", cursive;
     background: #0b0b0b;
     color: #eee;
 }
@@ -61,7 +59,8 @@ nav a:hover {
 /* HERO */
 .hero {
     height: 100vh;
-    background: url('cover.jpg') center/cover no-repeat;
+    background: url('assets/Cover.png') center/cover no-repeat;
+    background-position: center 10%;
     display: flex;
     align-items: center;
     padding: 60px;
@@ -184,7 +183,7 @@ footer {
 
 <!-- NAV -->
 <nav>
-    <img src="assets/Logo.png" alt ="Logo" width ="120" height ="100">
+    <img src="assets/Logo.png" alt ="Logo" width ="110" height ="90">
     <div>
         <a href="#world">World</a>
         <a href="#characters">Survivors</a>
@@ -195,14 +194,16 @@ footer {
 <!-- HERO -->
 <div class="hero">
     <div class="hero-content">
-        <h2>Dead Serious About You</h2>
+        <h2><br> a world overrun by the undead, a strict cop and a bratty thief
+            are forced to survive together… whether they like it or not.</h3>
         <p>
-            In a world overrun by the undead, a strict cop and a chaotic thief
-            are forced to survive together… whether they like it or not.
+            
+            
         </p>
-        <button onclick="document.getElementById('episodes').scrollIntoView()">Start Watching</button>
     </div>
 </div>
+
+
 
 <!-- WORLD -->
 <section id="world">
@@ -230,7 +231,7 @@ footer {
     <div class="characters">
 
         <div class="card">
-            <img src="alan.jpg">
+            <img src="assets/Alan.png">
             <div class="card-info">
                 <h3>Alan</h3>
                 <p>The last man still following the rules.</p>
@@ -238,13 +239,20 @@ footer {
         </div>
 
         <div class="card">
-            <img src="diana.jpg">
+            <img src="assets/Diana.png">
             <div class="card-info">
                 <h3>Diana</h3>
                 <p>The reason rules were made in the first place.</p>
             </div>
         </div>
 
+        <div class="card">
+            <img src="assets/Ramiel.png">
+            <div class="card-info">
+                <h3>Ramiel</h3>
+                <p>The guy.</p>
+            </div>
+        </div>
     </div>
 </section>
 
@@ -275,6 +283,5 @@ footer {
 <footer>
     <p>© Dead Serious About You</p>
 </footer>
-
 </body>
 </html>
